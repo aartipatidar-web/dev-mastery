@@ -217,9 +217,9 @@ export default function Playground() {
               </div>
             </div>
 
-            <div className="flex-1 flex flex-col lg:hidden min-h-0">
+            <div className="flex-1 flex flex-col lg:hidden min-h-0 overflow-hidden">
               {mobileView === 'problem' ? (
-                <div className="flex-1 overflow-auto"><ProblemDescription problem={selectedProblem} /></div>
+                <div className="flex-1 overflow-y-auto overscroll-contain -webkit-overflow-scrolling-touch"><ProblemDescription problem={selectedProblem} /></div>
               ) : (
                 <div className="flex-1 flex flex-col min-h-0">
                   <div className={cn("flex-1 min-h-0 p-2 transition-all", isOutputExpanded ? "h-[40%]" : "h-[calc(100%-3rem)]")}><CodeEditor code={code} onChange={handleCodeChange} language={selectedLanguage} /></div>
