@@ -53,7 +53,7 @@ export function ProblemDescription({ problem }: ProblemDescriptionProps) {
   };
 
   return (
-    <div className="h-full overflow-auto scrollbar-thin p-6">
+    <div className="h-full overflow-y-auto overscroll-contain p-4 sm:p-6" style={{ WebkitOverflowScrolling: 'touch' }}>
       {/* Difficulty & Tags */}
       <div className="flex items-center gap-3 mb-4">
         <span className={cn(
